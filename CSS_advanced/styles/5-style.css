@@ -17,8 +17,7 @@ html, body {
     --font-size-xx-large: 4.8rem;
   }
   body {
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-medium); 
+    font-family: var(--font-family-base); 
   }
   body, a {
     color: var(--text-color);
@@ -28,9 +27,11 @@ html, body {
     display: none;
   }
   html {
-    --font-size: 62.5%;
+    font-size: 62.5%;
   }
-  
+  body {
+    font-size: var(--font-size-medium);
+  }
   .card-category, .section-tagline {
     color: var(--color-primary);
   }
