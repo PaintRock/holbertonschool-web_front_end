@@ -21,8 +21,6 @@ html, body {
     color-light-grey: #f3f3f3;
     color-dark-grey: #353535;
     text-color: var(--color-black);
-  }
-  :root {
     --font-family-base: 'Helvetica Neue', Helvetica, Arial, san serif;
     --fort-family-title: 'Helvetica Neue', Helvetica, Arial, sans serif;
   }
