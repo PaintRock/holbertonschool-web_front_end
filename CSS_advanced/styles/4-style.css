@@ -9,7 +9,7 @@
     --text-color: var(--color-black);
   }
   
-  html, body {
+  html, Body {
     scroll-behavior: smooth;
     font-family: var(--font-family-base);
   }
