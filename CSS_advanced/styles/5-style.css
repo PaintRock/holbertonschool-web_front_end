@@ -29,7 +29,7 @@ html, body {
   html {
     font-size: 62.5%;
   }
-  Body {
+  body {
     font-size: var(--font-size-medium);
   }
   .card-category, .section-tagline {
