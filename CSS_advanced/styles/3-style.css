@@ -2,7 +2,11 @@ html
 {
   scroll-behavior: smooth;
 }
-body, a 
+body
+{
+color: var( --text-color);
+}
+a 
 {
 color: var( --text-color);
 }
