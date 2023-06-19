@@ -424,15 +424,13 @@
     padding: var(--section-padding);
   }    
   
-  .section-header 
-  {
+  .section-header {
     text-align: var(--section-header-align);
     padding: var(--section-header-padding);
   }
 
-  .section-body
-  {
-    padding: var(section-body-padding);
+  .section-body {
+    padding: var(--section-body-padding);
   }
   
   .section-footer {
@@ -440,8 +438,7 @@
     text-align: var(--section-footer-align);
   } 
 
-  .section-title
-  {
+  .section-title {
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
@@ -464,14 +461,13 @@
   
   .card-category {
       color: var(--color-primary);
-    }
-  
-  .footer{
-    padding: var(--footer-padding);
   }
-
-    h1, h2, h3, h4, h5, h6 {
+  
+  h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-family-title);
       font-weight: var(--font-weight-bold);
     }
-    
+ 
+  .footer {
+    padding: var(--footer-padding);
+  }   
