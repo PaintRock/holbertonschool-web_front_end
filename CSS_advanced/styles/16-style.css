@@ -382,6 +382,12 @@
       --section-tagline-transform: uppercase;
       --section-title-margin: 0;
       --section-title-color: var(--color-black);
+      --section-padding: 5rem 0;
+      --section-header-padding: 0 0 3rem;
+      --section-body-padding: 0 0 3rem;
+      --section-footer-padding: 3rem 0 0;
+      --section-footer-align: center;
+      --footer-padding: 5rem 0 1rem
     }
     body {
       font-family: var(--font-family-base);
@@ -413,12 +419,27 @@
     html {
       font-size: 62.5%;
     }
-      
+  
+  .section {
+    padding: var(--section-padding);
+  }    
+  
   .section-header 
   {
     text-align: var(--section-header-align);
+    padding: var(--section-header-padding);
+  }
+
+  .section-body
+  {
+    padding: var(section-body-padding);
   }
   
+  .section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
+  } 
+
   .section-title
   {
     font-family: var(--font-family-title);
@@ -427,6 +448,7 @@
     margin: var(--section-title-margin);
     color: var(--section-title-color);
   }
+  
   .section-tagline {
     color: var(--color-primary);
     font-family: var(--font-family-title);
@@ -444,7 +466,10 @@
       color: var(--color-primary);
     }
   
-    
+  .footer{
+    padding: var(--footer-padding);
+  }
+
     h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-family-title);
       font-weight: var(--font-weight-bold);
