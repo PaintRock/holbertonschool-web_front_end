@@ -27,7 +27,6 @@ html {
   }
   body {
     font-family: var(--font-family-base);
-    background color: var(--color-light-grey);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base); 
@@ -44,7 +43,7 @@ html {
   a:hover 
   {text-decoration: underline;}
   a:active 
-  {font-style: italic; color: red;}
+  {font-style: italic; color: light-grey;}
 
   a {
     text-decoration: none;
