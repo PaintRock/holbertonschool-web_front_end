@@ -388,6 +388,13 @@
       --section-footer-padding: 3rem 0 0;
       --section-footer-align: center;
       --footer-padding: 5rem 0 1rem
+      --nav-item-font-family: var(--font-family-title);
+      --nav-item-font-weight: var(--font-family-base);
+      --nav-item-font-size: var(--font-size-medium);
+      --nav-item-letter-spacing: calc(var(--root-element) * 0.04);
+      --nav-item-display: inline-block;
+      --nav-item-margin: 0 0 calc(var(--root-element) *3) 0;
+      
     }
     body {
       font-family: var(--font-family-base);
@@ -463,6 +470,33 @@
       color: var(--color-primary);
   }
   
+  .navbar-menu {
+    float: right;
+  }
+
+  .nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav .nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(nav-item-letter-spacing);
+    display: var(nav-item-display);
+    margin: var(nav-item-margin);
+  }
+
+  .nav .nav-link { 
+    display: block;
+    padding: var(--root-element) var(--root-element) calc(var(--root-element) / 2) var(--root-element);
+}
+.nav .nav-link:hover {
+  color: var(--nav-item-link-hover);
+
+}
   h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-family-title);
       font-weight: var(--font-weight-bold);
