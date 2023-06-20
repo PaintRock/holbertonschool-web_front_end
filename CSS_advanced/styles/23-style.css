@@ -536,7 +536,7 @@
       display:block;
     }
 
-    social-link svg {
+    .social-link > svg {
       fill: var(--text-color);
     }
  
@@ -548,7 +548,7 @@
       }
 
   .footer-address {
-    text-color: var(--text-color);
+    color: var(--text-color);
   }
   
   
