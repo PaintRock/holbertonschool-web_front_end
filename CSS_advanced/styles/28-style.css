@@ -405,7 +405,12 @@
       --button-font-size: var(--font-size-large);
       --button-hover-color: var(--color-white);
       --button-hover-text-decoration: none;
-      --button-hover-background: var(--color-primary);      
+      --button-hover-background: var(--color-primary);
+      --header-padding: 4rem 0 0;
+      --header-logo-link-position: relative;
+      --header-logo-link-display: absolute;
+      --header-logo-link-top: -1rem;
+      --header-logo-link-left: 0;      
     }
     body {
       font-family: var(--font-family-base);
@@ -417,6 +422,7 @@
     body, a {
       color: var(--text-color);
     }
+
     a:link 
     {font-style: italic;}
     a:visited {
@@ -430,6 +436,24 @@
     a {
       text-decoration: none;
     }
+        
+    .header {
+      padding: var(--header-padding);
+    }
+
+    .header-logo {
+      position: var(--header-logo-position);
+    }
+
+    .header-logo a {
+      display: var(--header-logo-link-display);
+      position: var(--header-logo-link-position);
+      top: var(--header-logo-link-top);
+      left: var(--header-logo-link-left);
+    }
+    
+    
+    
     .visually-hidden {
       display: none;
     }
