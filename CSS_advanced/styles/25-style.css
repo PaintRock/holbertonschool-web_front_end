@@ -580,16 +580,13 @@
       background: var(--button-hover-background);
     }
     
-    [data-section-theme="dark"] {
-      --button-color: color-white;
-    }
-    
     [data-section-theme="dark"] 
     {
         --text-color: var(--color-white);
         --section-title-color: var(--color-white);
         background: var(--color-black);
-      }
+        --button-color: color-white;
+    }
 
   .footer-address {
     color: var(--text-color);
