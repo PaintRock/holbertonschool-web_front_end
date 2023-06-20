@@ -527,13 +527,14 @@
  
   .footer-copyright {
       margin: 0;
-      font: var(--font-size-small);
+      font-size: var(--font-size-small);
       color: var(--text-color);
     }
 
-  u1 .footer {
-    text-align: right;
-  }
+    .footer ul
+    {
+        text-align: right;
+    }
   
   .footer {
     padding: var(--footer-padding);
