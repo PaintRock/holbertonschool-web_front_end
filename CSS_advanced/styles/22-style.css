@@ -532,13 +532,13 @@
       font-weight: var(--font-weight-bold);
     }
  
-    [data-scetion-theme="dark"]
+    [data-section-theme="dark"] 
     {
-      --text-color: var(--color-white);
-      --section-title-color: var(--color-white);
-      background: var(--color-black);
-    }
-    
+        --text-color: var(--color-white);
+        --section-title-color: var(--color-white);
+        background: var(--color-black);
+      }
+
   .footer-copyright {
       margin: 0;
       font-size: var(--font-size-small);
