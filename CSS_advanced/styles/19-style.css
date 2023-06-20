@@ -531,7 +531,7 @@
       color: var(--text-color);
     }
 
-  .footer u1 {
+  u1 .footer {
     text-align: right;
   }
   
