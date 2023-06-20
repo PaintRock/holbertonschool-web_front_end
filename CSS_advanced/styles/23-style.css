@@ -532,7 +532,7 @@
       font-weight: var(--font-weight-bold);
     }
 
-    social-link {
+    .social-link {
       display:block;
     }
 
