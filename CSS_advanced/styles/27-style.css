@@ -552,18 +552,21 @@
     text-decoration: none;
   }
 
-.section-hero {
-    background-size: 90rem auto;
-}
-
-.section-hero. section-title {
-    margin-bottom: 5rem;
-}
-
-.section-hero. section-inner {
-    padding: 10rem 40rem 2rem 0;
-}
- 
+  .section-hero
+  {
+      background-size: 90rem auto;
+  }
+  
+  .section-hero .section-title 
+  {
+      margin-bottom: 5rem;
+  }
+    
+  .section-hero .section-inner 
+  {
+      padding: 10rem 40rem 2rem 0;
+  }
+  
   h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-family-title);
       font-weight: var(--font-weight-bold);
