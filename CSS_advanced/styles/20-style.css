@@ -520,7 +520,7 @@
     color: var(--nav-item-link-hover);
   }
   
-  .row:after {
+  .row::after {
     content: "";
     clear: none;
     display: table;
