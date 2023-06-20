@@ -452,7 +452,7 @@
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
     margin: var(--section-title-margin);
-    color: var(--color-white);
+    color: var(--section-title-color);
   }
   
   .section-tagline {
@@ -532,6 +532,13 @@
       font-weight: var(--font-weight-bold);
     }
  
+    [data-scetion-theme="dark"]
+    {
+      --text-color: var(--color-white);
+      --section-title-color: var(--color-white);
+      background: var(--color-black);
+    }
+    
   .footer-copyright {
       margin: 0;
       font-size: var(--font-size-small);
@@ -542,6 +549,7 @@
     {
         text-align: right;
     }
+
   
   .footer {
     padding: var(--footer-padding);
