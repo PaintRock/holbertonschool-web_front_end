@@ -585,7 +585,7 @@
     height: 30rem;
     width: 100%;
     object-fit: cover;
-    vertically align: bottom;
+    vertical-align: bottom;
   }
 
   .card-work .card-inner {
@@ -593,7 +593,7 @@
     top: -0.1rem;
     left: -0.1rem;
     right: -0.1rem;
-    z-index; 1;
+    z-index: 1;
   }
 
   .card-work:hover .card-inner
