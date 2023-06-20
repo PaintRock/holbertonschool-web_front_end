@@ -539,7 +539,7 @@
     .social-link > svg {
       fill: var(--text-color);
     }
- 
+
     [data-section-theme="dark"] 
     {
         --text-color: var(--color-white);
@@ -552,7 +552,7 @@
   }
   
   
-      .footer-copyright {
+  .footer-copyright {
       margin: 0;
       font-size: var(--font-size-small);
       color: var(--text-color);
