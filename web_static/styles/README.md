@@ -1,1 +1,0 @@
-This is a readme inside of the styles folder inside of the webstatic folder
