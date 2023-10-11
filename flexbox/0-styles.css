@@ -185,17 +185,17 @@
     display: flex;
   }
   
-  /*ul.row {
+  ul.row {
     margin: 0;
     padding: 0;
     list-style: none;
-  }*/
+  }
   
-  .row::after {
+  /*.row::after {
     content: '';
     display: table;
     clear: both;
-  }
+  }*/
   
   [class*='col-'] {
     /*float: left; */
