@@ -181,11 +181,15 @@
   /* Grid
       ============================= */
   
-  ul.row {
+  .row {
+    display: flex;
+  }
+  
+  /*ul.row {
     margin: 0;
     padding: 0;
     list-style: none;
-  }
+  }*/
   
   .row::after {
     content: '';
@@ -194,7 +198,7 @@
   }
   
   [class*='col-'] {
-    float: left;
+    /*float: left; */
     padding: 0.5rem;
   }
   
