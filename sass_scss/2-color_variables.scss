@@ -2,15 +2,15 @@ $texty-color: #3D3D3D;
 
 $background-color: #6D6D6D;
 
-body {
-    color: texty-color;
+body{
+    color: $texty-color;
     background-color: $background-color;
 }
 
-p {
-    color: texty-color;
+p{
+    color: $texty-color;
 }
 
- hg {
+hg{
     background-color: $background-color; 
 }
