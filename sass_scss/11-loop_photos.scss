@@ -1,13 +1,7 @@
-@import "10-colors";
+@import "names-list";
 
-.red {
-  color: $red;
-}
-
-.green {
-  color: $green;
-}
-
-.blue {
-  color: $blue;
+@each $name, $background-image in $list-names {
+  .#{$name} {
+    background-image: $background-image;
+  }
 }
