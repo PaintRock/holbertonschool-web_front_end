@@ -232,12 +232,12 @@
     font-size: var(--nav-item-font-size);
     letter-spacing: var(--nav-item-letter-spacing);
     /*display: var(--nav-item-display);
-    margin: var(--nav-item-margin);*/
+    margin: ;*/
   }
 
   .nav .nav-item + .nav-item {
-    margin: 0 0 0 2rem; /* Add margin declaration here */
-  }
+    margin: var(--nav-item-margin); 
+    }
   
   .nav .nav-link {
     display: block;
