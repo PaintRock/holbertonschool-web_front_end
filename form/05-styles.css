@@ -720,7 +720,8 @@ textarea:focus {
 .form-group {
   padding: 1rem;
   margin: 0;
-  background-color: color-white;
+  background-color: var(--color-white);
+}
 
   .form-group:focus-within {
   background-color: var(--color-light-grey);
@@ -760,7 +761,3 @@ textarea:focus {
   max-height: 20rem;
   margin: .4rem 0 0;
 }
-
-}
-
-  }
