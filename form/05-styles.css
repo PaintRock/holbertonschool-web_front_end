@@ -715,7 +715,7 @@ textarea:focus {
   font-style: italic;
   font-size: var(--font-size-small);
 }
-* Form group ============================= */
+/* Form group ============================= */
 
 .form-group {
   padding: 1rem;
