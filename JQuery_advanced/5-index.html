@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>5-index</title>
+    <style>
+        /* CSS for the third cell */
+        .remove-cell {
+            background-color: orange;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script type="application/javascript">
+        // Create function to generate the family tree table structure
+        function createFamilyTree() {
+            // Create an empty table with thead and two cells
+            var table = $('<table>').append(
+                $('<thead>').append(
+                    $('<tr>').append(
+                        $('<th>').text('Firstname'),
+                        $('<th>').text('Lastname')
+                    )
+                ),
+                $('<tbody>')
+            );
+
+            // Append the empty table to the body
+            $('body').append(table);
+        }
+
+        // Create function to add a new member to the family tree
+        function addNewMember(firstName, lastName) {
+            // Create a new row with three cells
+            var newRow = $('<tr>').append(
+                $('<td>').text(firstName),
+                $('<td>').text(lastName),
+                $('<td>').addClass('remove-cell').text('(x)').click(function() {
+                    // Remove the row when the third cell is clicked
+                    $(this).closest('tr').remove();
+                })
+            );
+
+            // Append the new row to the table body
+            $('tbody').append(newRow);
+        }
+
+        // Call the function to create the initial family tree structure
+        createFamilyTree();
+
+        // Add new members using addNewMember function
+        addNewMember('Guillaume', 'Salva');
+        addNewMember('Arielle', 'Snizt');
+        addNewMember('Fanette', 'Snizt');
+        addNewMember('Gerard', 'Snizt');
+        addNewMember('Victor', 'Salva');
+    </script>
+</body>
+
+</html>
