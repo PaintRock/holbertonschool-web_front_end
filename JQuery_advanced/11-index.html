@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>11. Post query</title>
+    <title>11-index</title>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -23,7 +23,7 @@
           $("body").append(paragraph);
         }
         function listPosts() {
-          $.get("http://localhost:3355/posts", function (data) {
+          $.get("http://localhost:3000/posts", function (data) {
             data.forEach(function (post) {
               addPostRow(post);
             });
@@ -55,7 +55,7 @@
             author: $("#author").val(),
             title: $("#title").val(),
           };
-          $.post("http://localhost:3355/posts", postData, function (data) {
+          $.post("http://localhost:3000/posts", postData, function (data) {
             addPostRow(data);
           }).fail(function () {
             alert("Error sending the POST query");

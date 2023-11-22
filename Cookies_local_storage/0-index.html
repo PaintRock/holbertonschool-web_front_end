@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0-index</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Matching background color */
+        }
+
+        .login-header {
+            font-size: 4em;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .login-boxes {
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 300px;
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        .login-button,
+        .show-cookies-button {
+            padding: 8px 20px;
+            font-size: 1.5em;
+            border-radius: 5px;
+            border: 2px solid #ccc; /* Grey border color */
+            border-bottom: 4px solid #999; /* Darker bottom border */
+            border-right: 4px solid #999; /* Darker right border */
+            background-color: #fff; /* Matching background color */
+        }
+
+        .login-button:hover,
+        .show-cookies-button:hover {
+            background-color: #f9f9f9; /* Lighter background on hover */
+        }
+
+        .cookies-text {
+            font-size: 4em;
+            font-weight: bold;
+        }
+
+        .show-cookies-button {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-header">
+        Login to webpage
+    </div>
+
+    <div class="login-boxes">
+        <input type="text" id="firstname" class="input-field" placeholder="Firstname">
+        <input type="text" id="email" class="input-field" placeholder="Email">
+        <button onclick="setCookies()" class="login-button">Log me in</button>
+    </div>
+
+    <div class="cookies-text">
+        Cookies
+    </div>
+
+    <button onclick="showCookies()" class="show-cookies-button">Show the cookies</button>
+
+    <script src="src/index.js"></script>
+</body>
+</html>

@@ -23,7 +23,7 @@
           $("body").append(paragraph);
         }
         function listPosts() {
-          $.get("http://localhost:3355/posts", function (data) {
+          $.get("http://localhost:3000/posts", function (data) {
             data.forEach(function (post) {
               addPostRow(post);
             });

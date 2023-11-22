@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <title>2-index</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-</head>
-
-<body>
+    <title>0-index</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
     <script type="application/javascript">
-        // Create function for table element
-        function createFamilyTree() {
-            // Properly define tableNames as a string
-            var tableNames = '<table> <thead> <tr>' +
-                '<th>Firstname</th>' + '<th>Lastname</th>' +
-                '</tr>' + '</thead>' +
-                '<tbody>' +
-                '<tr>' +
-                '<td>Guillaume</td>' + '<td>Salva</td>' +
-                '</tr>' +
-                '<tr>' + 
-                '<td>Paulette</td>' + '<td>Salva</td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>Antoine</td>' + '<td>Salva</td>' +
-                '</tr>' +
-                '</tbody>' +
-                '</table>';
-
-            // Append the table to the page using jQuery
-            $('body').append(tableNames);
+      window.onload = function () {
+        if (window.jQuery) {
+          console.log("jQuery has been loaded correctly");
+        } else {
+          console.log("jQuery has not been loaded correctly");
         }
-
-        // Call the createFamilyTree function
-        createFamilyTree();
+      };
     </script>
-</body>
-
+  </head>
+  <body></body>
 </html>
