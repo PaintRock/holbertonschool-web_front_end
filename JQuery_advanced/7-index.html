@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>7-index</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <script type="application/javascript">
+        // Create search form function
+        function createSearchForm() {
+            // Append form elements to the body
+            $('body').append(
+                $('<form>').append(
+                    $('<input>').attr({ type: 'text' }),
+                    $('<input>').attr({ type: 'submit', value: 'Search' }),
+                    $('<ul>')
+                )
+            );
+
+            // Submit event for form
+            $('form').on('submit', function(e) {
+                e.preventDefault();
+                var searchTerm = $(this).find('input[type="text"]').val();
+                queryWikipedia(searchTerm);
+            });
+        }
+
+        // Function to add new article to the list
+        function addNewArticle(id, title, snippet) {
+            var li = $('<li>');
+            var titleParagraph = $('<p>').append(
+                $('<span>').text(id + ' - '),
+                $('<b>').text(title)
+            );
+            var snippetParagraph = $('<p>').html(snippet);
+            li.append(titleParagraph, snippetParagraph);
+            $('ul').append(li);
+        }
+
+        // Function to query Wikipedia API
+        function queryWikipedia(search) {
+            var url = 'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=' + search;
+
+            $.ajax({
+                url: url,
+                dataType: 'jsonp',
+                success: function(data) {
+                    var results = data.query.search;
+                    $('ul').empty(); // Clear the list before adding new results
+                    results.forEach(function(result) {
+                        addNewArticle(result.pageid, result.title, result.snippet);
+                    });
+                },
+                error: function(error) {
+                    console.error('Error fetching data:', error);
+                }
+            });
+        }
+
+        // Call the function to create the search form when the page loads
+        $(document).ready(function() {
+            createSearchForm();
+        });
+    </script>
+</body>
+
+</html>
