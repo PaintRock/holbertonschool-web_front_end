@@ -16,13 +16,7 @@ function setCookies() {
 }
 
 
-function showCookies() {
-    const firstNameCookie = getCookie('firstname');
-    const emailCookie = getCookie('email');
-    
-    const cookiesOutput = `First Name: ${firstNameCookie}\nEmail: ${emailCookie}`;
-    alert(cookiesOutput);
-}
+
 
 function getCookie(name) {
     const cookies = document.cookie.split(';');
@@ -34,41 +28,84 @@ function getCookie(name) {
     }
     return '';
 }
-function showWelcomeMessageOrForm() {
-    var firstName = getCookie('firstname');
-    var welcomeMessageDiv = document.querySelector('.welcome-message');
-    var loginFormDiv = document.querySelector('.login-form');
 
-    if (firstName) {
-        // If user is logged in
-        if (welcomeMessageDiv) {
-            welcomeMessageDiv.innerHTML = ''; // Clear existing content
-            var welcomeMessage = document.createElement('h1');
-            welcomeMessage.textContent = `Welcome ${firstName}`;
-            var logoutLink = document.createElement('a');
+function showCookies() {
+    const firstNameCookie = getCookie('firstname');
+    const emailCookie = getCookie('email');
+    
+    const cookiesOutput = `First Name: ${firstNameCookie}\nEmail: ${emailCookie}`;
+    alert(cookiesOutput);
+}
+function hideWelcomeMessage() {
+    const welcomeMessageDiv = document.querySelector('.welcome-message');
+    if (welcomeMessageDiv) {
+        welcomeMessageDiv.style.display = 'none'; // Hide the welcome message
+    }
+}
+
+function showWelcomeMessage() {
+    const welcomeMessageDiv = document.querySelector('.welcome-message');
+    const loginFormDiv = document.querySelector('.login-container');
+
+    if (welcomeMessageDiv) {
+        welcomeMessageDiv.innerHTML = ''; // Clear existing content
+        const h1Element = document.createElement('h1');
+        const firstName = getCookie('firstname');
+
+        if (firstName) {
+            // If user is logged in
+            h1Element.textContent = `Welcome ${firstName}`;
+            const logoutLink = document.createElement('a');
             logoutLink.textContent = '(logout)';
             logoutLink.style.fontStyle = 'italic';
             logoutLink.style.fontWeight = 'normal';
             logoutLink.style.marginLeft = '10px';
             logoutLink.href = '#';
             logoutLink.onclick = function () {
-                deleteCookiesAndShowForm();
+                deleteCookiesAndShowLoginForm();
                 return false;
             };
-            welcomeMessage.appendChild(logoutLink);
-            welcomeMessageDiv.appendChild(welcomeMessage);
+            h1Element.appendChild(logoutLink);
+        } else {
+            // If user is not logged in
+            h1Element.textContent = 'Welcome'; // Display a default welcome message
         }
-        if (loginFormDiv) {
-            loginFormDiv.style.display = 'none'; // Hide the login form
-        }
-    } else {
-        // If user is not logged in
-        if (welcomeMessageDiv) {
-            welcomeMessageDiv.style.display = 'none'; // Hide the welcome message
-        }
-        if (loginFormDiv) {
-            loginFormDiv.style.display = 'block'; // Show the login form
-        }
+
+        welcomeMessageDiv.appendChild(h1Element);
+    }
+
+    hideLoginForm(); // Hide the login form
+    if (welcomeMessageDiv) {
+        welcomeMessageDiv.style.display = 'block'; // Show the welcome message
     }
 }
 
+function deleteCookiesAndShowLoginForm() {
+    document.cookie = 'firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    hideWelcomeMessage(); // Hide the welcome message after deleting cookies
+    showLoginForm(); // Show the login form
+}
+
+function showLoginForm() {
+    const loginFormDiv = document.querySelector('.login-container');
+    if (loginFormDiv) {
+        loginFormDiv.style.display = 'block'; // Show the login form
+    }
+}
+
+function hideLoginForm() {
+    const loginFormDiv = document.querySelector('.login-container');
+    if (loginFormDiv) {
+        loginFormDiv.style.display = 'none'; // Hide the login form
+    }
+}
+function setCookiesAndShowWelcome() {
+    setCookies();
+    showWelcomeMessage();
+}
+
+// Update the button onclick to call setCookiesAndShowWelcome
+
+// Call showLoginForm on page load to display the login form initially
+window.onload = showLoginForm;

@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2-index</title>
+    <title>0-index</title>
     <style>
-        /* CSS for styling (same as previous) */
-        /* ... */
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Matching background color */
+        }
+
+        .login-header {
+            font-size: 4em;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .login-boxes {
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 300px;
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        .login-button,
+        .show-cookies-button {
+            padding: 8px 20px;
+            font-size: 1.5em;
+            border-radius: 5px;
+            border: 2px solid #ccc; /* Grey border color */
+            border-bottom: 4px solid #999; /* Darker bottom border */
+            border-right: 4px solid #999; /* Darker right border */
+            background-color: #fff; /* Matching background color */
+        }
+
+        .login-button:hover,
+        .show-cookies-button:hover {
+            background-color: #f9f9f9; /* Lighter background on hover */
+        }
+
+        .cookies-text {
+            font-size: 4em;
+            font-weight: bold;
+        }
+
+        .show-cookies-button {
+            display: block;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -26,32 +73,6 @@
 
     <button onclick="showCookies()" class="show-cookies-button">Show the cookies</button>
 
-    <script>
-        function setCookies() {
-            // Code to set cookies (same as previous)
-            // ...
-        }
-
-        function showCookies() {
-            var emailValue = getCookie('email');
-            var firstNameValue = getCookie('firstname');
-            var displayText = `Email: ${emailValue} - Firstname: ${firstNameValue}`;
-            
-            var paragraph = document.createElement('p');
-            paragraph.textContent = displayText;
-            document.body.appendChild(paragraph);
-        }
-
-        function getCookie(name) {
-            var cookies = document.cookie.split(';');
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i].trim();
-                if (cookie.startsWith(name + '=')) {
-                    return cookie.substring(name.length + 1);
-                }
-            }
-            return '';
-        }
-    </script>
+    <script src="src/index.js"></script>
 </body>
 </html>
